@@ -9,12 +9,12 @@ html
     p= cookie
     h2 Get link
     p
-      a(href="/") Server1
+      a(href=server1) Server1
     p
-      a(href="http://localhost:8000") Server2
+      a(href="/") Server2
     h2 Post
     h4 Post to server1
-    form(method="POST" action="http://localhost:8000")
+    form(method="POST" action=server1)
       input(type="text")
       input(type="submit")
     h4 Post to server2

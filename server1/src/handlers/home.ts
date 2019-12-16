@@ -1,14 +1,23 @@
 import { Handler } from 'express';
+import { SAMESITE, SERVER2_ORIGIN } from '../../../config';
 
 export const home: Handler = (req, res) => {
   const cookie = req.header('Cookie') || '';
 
-  res.setHeader('Cookie', 'server1=dayo; SameSite=Lax');
-  res.render('home', { cookie, posted: false });
+  res.setHeader('Set-Cookie', `server1=dayo; SameSite=${SAMESITE}`);
+  res.render('home', {
+    cookie,
+    posted: false,
+    server2: SERVER2_ORIGIN,
+  });
 };
 
 export const postHome: Handler = (req, res) => {
   const cookie = req.header('Cookie') || '';
 
-  res.render('home', { cookie, posted: true });
+  res.render('home', {
+    cookie,
+    posted: true,
+    server2: SERVER2_ORIGIN,
+  });
 };

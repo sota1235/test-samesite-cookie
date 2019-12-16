@@ -2,9 +2,10 @@ import express from 'express';
 import logger from 'morgan';
 import { setRoutes } from './routes';
 import path from 'path';
+import { SERVER1_PORT } from '../../config';
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = SERVER1_PORT;
 
 // TODO switch format for Prod
 app.use(logger('dev'));

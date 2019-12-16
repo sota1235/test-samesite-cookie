@@ -11,13 +11,13 @@ html
     p
       a(href="/") Server1
     p
-      a(href="http://localhost:8001") Server2
+      a(href=server2) Server2
     h2 Post
     h4 Post to server1
     form(method="POST" action="/")
       input(type="text")
       input(type="submit")
     h4 Post to server2
-    form(method="POST" action="http://localhost:8001")
+    form(method="POST" action=server2)
       input(type="text")
       input(type="submit")
