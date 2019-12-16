@@ -1,0 +1,21 @@
+html
+  head
+    title= 'server2'
+  body
+    h1= 'Server2'
+    if posted
+      p= 'Posted!'
+    h2= "Cookie"
+    p= cookie
+    h2= "Get link"
+    a(href="/") "Server1"
+    a(href="http://localhost:8000") "Server2
+    h2= "Post"
+    h4= 'Post to server1'
+    form(method="POST" action="http://localhost:8000")
+      input(type="text")
+      input(type="submit")
+    h4= 'Post to server2'
+    form(method="POST" action="/")
+      input(type="text")
+      input(type="submit")
