@@ -10,7 +10,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.20.0",
     "morgan": "^1.9.1",
     "pug": "^2.0.4",
     "typescript": "^3.7.2"
